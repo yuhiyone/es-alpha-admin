@@ -3,6 +3,10 @@ h1 {
     text-align: center;
 }
 
+p {
+    margin: 0;
+}
+
 /* テーブル全体 */
 table {
     margin: auto;

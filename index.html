@@ -1,160 +1,174 @@
 <!DOCTYPE html>
 <html lang="ja">
+
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>管理画面／ホーム</title>
 </head>
+
+
 <body>
     <script src="script.js"></script>
 
 <h1>管理画面／ホーム</h1>
-
-    <!-- 表 -->
+<p align="center">※オンマウスで引用元／数式が表示されます</p>
+<!-- 表 -->
     <table border>
         <tr>
-            <td class="index_left1" colspan="2">ユーザー一覧</td>
+            <td class="index_left1" colspan="2"><a href="users.html">ユーザー一覧</a></td>
         </tr>
         <tr>
-            <td class="index_left1" colspan="2">作品一覧</td>
+            <td class="index_left1" colspan="2"><a href="artworks.html">作品一覧</a></td>
         </tr>
         <tr>
-            <td class="index_left2">上場待ち作品一覧</td>
-            <td>3-2</td>
+            <td class="index_left2"><a href="waiting-for-listing.html" title="上場待ちの作品数が表示されます
+（artworks≫sales_status≫【上場待ち(selected)】の和）">上場待ち作品一覧</a></td>
+            <td><font color="red">
+                4
+            </font></td>
         </tr>
         <tr>
-            <td class="index_left2">ETH送付申請</td>
-            <td>4-2</td>
-        </tr>
-        <tr>
-            <td colspan="2">　</td>
-        </tr>
-        <tr>
-            <td class="left">一般ユーザー数</td>
-            <td>6-2</td>
-        </tr>
-        <tr>
-            <td class="left">クリエイター数</td>
-            <td>7-2</td>
+            <td class="index_left2"><a href="eth-transfer-requests.html" title="ETH送付申請待ちの数が表示されます
+（eth_transfer_requests≫eth_transfer_status≫【送付済】の和">ETH送付申請</a></td>
+            <td><font color="red">
+                2
+            </font></td>
         </tr>
         <tr>
             <td colspan="2">　</td>
         </tr>
         <tr>
-            <td class="left">投票受付中作品数</td>
-            <td>9-2</td>
+            <td class="left"><p title="user≫role≫【general】の和">
+                一般ユーザー数
+            </p></td>
+            <td>189</td>
         </tr>
         <tr>
-            <td class="left">総投稿作品数</td>
-            <td>10-2</td>
+            <td class="left"><p title="user≫role≫【creator】の和">
+                クリエイター数
+            </p></td>
+            <td>43</td>
         </tr>
         <tr>
-            <td class="left">Selected作品数</td>
-            <td>11-2</td>
+            <td colspan="2">　</td>
         </tr>
         <tr>
-            <td class="left">Not Selected作品数</td>
-            <td>12-2</td>
+            <td class="left"><p title="artworks≫sales_status≫【投票受付中】の和">投票受付中作品数</p></td>
+            <td>48</td>
         </tr>
         <tr>
-            <td class="left">Select率</td>
-            <td>13-2</td>
+            <td class="left"><p title="artworksのレコード数">総投稿作品数</p></td>
+            <td>149</td>
+        </tr>
+        <tr>
+            <td class="left"><p title="artworks≫sales_status≫【上場待ち(Selected)】【販売中(Selected)】【販売終了(分配待ち)】【販売終了(分配済み)】の和">Selected作品数</p></td>
+            <td>24</td>
+        </tr>
+        <tr>
+            <td class="left"><p title="artworks≫sales_status≫【未上場(Not Selected)】の和">Not Selected作品数</p></td>
+            <td>77</td>
+        </tr>
+        <tr>
+            <td class="left"><p title="100 * {1 - [artworks≫sales_status≫【未上場(Not Selected)] / {[artworksのレコード数] - [artworks≫sales_status≫【投票受付中】]}}">Select率</p></td>
+            <td>23.76%</td>
         </tr>
         <tr>
             <td colspan="2">　</td>
         </tr>
         <tr>
             <td class="left">総閲覧数</td>
-            <td>15-2</td>
+            <td>■</td>
         </tr>
         <tr>
             <td class="left">平均閲覧数／作品</td>
-            <td>16-2</td>
+            <td>■</td>
         </tr>
         <tr>
             <td class="left">平均閲覧率／作品</td>
-            <td>17-2</td>
+            <td>■</td>
         </tr>
         <tr>
             <td class="left">総投票件数</td>
-            <td>18-2</td>
+            <td>■</td>
         </tr>
         <tr>
             <td class="left">総投票いいね数</td>
-            <td>19-2</td>
+            <td>■</td>
         </tr>
         <tr>
             <td class="left">平均投票いいね数／作品</td>
-            <td>20-2</td>
+            <td>■</td>
         </tr>
         <tr>
             <td class="left">平均投票率</td>
-            <td>21-2</td>
+            <td>■</td>
         </tr>
         <tr>
             <td colspan="2">　</td>
         </tr>
         <tr>
             <td class="left">平均一般ユーザー収益／作品</td>
-            <td>23-2</td>
+            <td>■</td>
         </tr>
         <tr>
             <td class="left">平均一般ユーザー収益／月</td>
-            <td>24-2</td>
+            <td>■</td>
         </tr>
         <tr>
             <td class="left">平均クリエイター収益／作品</td>
-            <td>25-2</td>
+            <td>■</td>
         </tr>
         <tr>
             <td class="left">平均クリエイター収益／月</td>
-            <td>26-2</td>
+            <td>■</td>
         </tr>
         <tr>
             <td colspan="2">　</td>
         </tr>
         <tr>
             <td class="left">ETH現在価格（円）</td>
-            <td>28-2</td>
+            <td>■</td>
         </tr>
         <tr>
             <td colspan="2">　</td>
         </tr>
         <tr>
             <td class="left">通算収益（ETH）</td>
-            <td>30-2</td>
+            <td>■</td>
         </tr>
         <tr>
             <td class="left">通算収益（円）</td>
-            <td>31-2</td>
+            <td>■</td>
         </tr>
         <tr>
             <td colspan="2">　</td>
         </tr>
         <tr>
             <td class="left">収益１ヶ月目（ETH）</td>
-            <td>33-2</td>
+            <td>■</td>
         </tr>
         <tr>
             <td class="left">収益２ヶ月目（ETH）</td>
-            <td>34-2</td>
+            <td>■</td>
         </tr>
         <tr>
             <td class="left">収益３ヶ月目（ETH）</td>
-            <td>35-2</td>
+            <td>■</td>
         </tr>
         <tr>
             <td class="left">収益１ヶ月目（円）</td>
-            <td>36-2</td>
+            <td>■</td>
         </tr>
         <tr>
             <td class="left">収益２ヶ月目（円）</td>
-            <td>37-2</td>
+            <td>■</td>
         </tr>
         <tr>
             <td class="left">収益３ヶ月目（円）</td>
-            <td>38-2</td>
+            <td>■</td>
         </tr>
         </table>
 
